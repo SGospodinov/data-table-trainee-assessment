@@ -9,8 +9,8 @@ class BroadcastingRecord {
 
   toHTML(){
     let html = "";
-    this.records.forEach(function(record){
-      html += record.toHTML();
+    this.records.forEach(function(record, index){
+      html += record.toHTML(index);
     });
     return html;
   }

@@ -1,11 +1,39 @@
-/*
-  Start adding CSS here
-*/
+#content-wrapper {
+  width: 70%;
+  margin: auto;
+  color: #545454;
+  font-family: sans-serif;
+}
+
+#page-header {
+  width: 100%;
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: lighter;
+}
 
 #broadcasts-data-table {
   display: none;
+  width: 100%;
+  margin: 5% auto 5% auto;
+  text-align: center;
+  font-size: 1em;
+  border-collapse: collapse;
 }
 
-#broadcasts-data-table thead {
-  font-weight: bold;
+#broadcasts-data-table thead tr {
+  background-color: #DCDEEF;
+}
+
+#broadcasts-data-table tr td, th {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+#broadcasts-data-table tr.even {
+  background-color: #F5F5F5;
+}
+
+#broadcasts-data-table tr.odd {
+  background-color: #EAECFF;
 }

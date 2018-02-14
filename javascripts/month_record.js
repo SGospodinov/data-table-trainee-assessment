@@ -36,9 +36,10 @@ class MonthRecord {
     return this.broadcastingNumbers['cbeebies'];
   }
 
-  toHTML(){
+  toHTML(index){
+    let className = ((index % 2) == 0) ? 'even' : 'odd';
     return `
-      <tr>
+      <tr class="${ className }">
         <td>${ this.getFormatedMonth() }</td>
         <td>${ this.getBBCOne() }</td>
         <td>${ this.getBBCTwo() }</td>
