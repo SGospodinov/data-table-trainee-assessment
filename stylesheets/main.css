@@ -37,3 +37,21 @@
 #broadcasts-data-table tr.odd {
   background-color: #EAECFF;
 }
+
+#broadcasts-data-table tfoot td{
+  text-align: left;
+  padding-top: 2%;
+  color: #848484;
+}
+
+#broadcasts-data-table th:hover {
+  cursor: pointer;
+}
+
+#broadcasts-data-table th[data-sort=asc]::after {
+  content: "↑";
+}
+
+#broadcasts-data-table th[data-sort=desc]::after {
+  content: "↓";
+}

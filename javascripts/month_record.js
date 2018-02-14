@@ -1,39 +1,17 @@
 class MonthRecord {
   constructor(month, broadcastingNumbers) {
     this.month = month;
-    this.broadcastingNumbers = broadcastingNumbers;
+    this.bbcone = broadcastingNumbers['bbcone'];
+    this.bbctwo = broadcastingNumbers['bbctwo'];
+    this.bbcthree = broadcastingNumbers['bbcthree'];
+    this.bbcfour = broadcastingNumbers['bbcfour'];
+    this.bbcnews24 = broadcastingNumbers['bbcnews24'];
+    this.cbbc = broadcastingNumbers['cbbc'];
+    this.cbeebies = broadcastingNumbers['cbeebies'];
   }
 
   getFormatedMonth() {
     return DateFormatter.format(new Date(this.month));
-  }
-
-  getBBCOne() {
-    return this.broadcastingNumbers['bbcone'];
-  }
-
-  getBBCTwo() {
-    return this.broadcastingNumbers['bbctwo'];
-  }
-
-  getBBCThree() {
-    return this.broadcastingNumbers['bbcthree'];
-  }
-
-  getBBCFour() {
-    return this.broadcastingNumbers['bbcfour'];
-  }
-
-  getBBCNews() {
-    return this.broadcastingNumbers['bbcnews24'];
-  }
-
-  getCBBC() {
-    return this.broadcastingNumbers['cbbc'];
-  }
-
-  getCbeebies(){
-    return this.broadcastingNumbers['cbeebies'];
   }
 
   toHTML(index){
@@ -41,13 +19,13 @@ class MonthRecord {
     return `
       <tr class="${ className }">
         <td>${ this.getFormatedMonth() }</td>
-        <td>${ this.getBBCOne() }</td>
-        <td>${ this.getBBCTwo() }</td>
-        <td>${ this.getBBCThree() }</td>
-        <td>${ this.getBBCFour() }</td>
-        <td>${ this.getBBCNews() }</td>
-        <td>${ this.getCBBC() }</td>
-        <td>${ this.getCbeebies() }</td>
+        <td>${ this.bbcone }</td>
+        <td>${ this.bbctwo }</td>
+        <td>${ this.bbcthree }</td>
+        <td>${ this.bbcfour }</td>
+        <td>${ this.bbcnews24 }</td>
+        <td>${ this.cbbc }</td>
+        <td>${ this.cbeebies }</td>
       </tr>
     `;
   }

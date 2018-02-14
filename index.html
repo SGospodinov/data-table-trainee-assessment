@@ -14,21 +14,27 @@
     <table id="broadcasts-data-table">
       <thead>
         <tr>
-          <th>Date</th>
-          <th>BBC One</th>
-          <th>BBC Two</th>
-          <th>BBC Three</th>
-          <th>BBC Four</th>
-          <th>BBC News 24</th>
-          <th>CBBC</th>
-          <th>Cbeebies</th>
+          <th data-col-name="month">Date</th>
+          <th data-col-name="bbcone">BBC One</th>
+          <th data-col-name="bbctwo">BBC Two</th>
+          <th data-col-name="bbcthree">BBC Three</th>
+          <th data-col-name="bbcfour">BBC Four</th>
+          <th data-col-name="bbcnews24">BBC News 24</th>
+          <th data-col-name="cbbc">CBBC</th>
+          <th data-col-name="cbeebies">Cbeebies</th>
         </tr>
       </thead>
       <tbody>
       </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="8">* Press the column titles to sort the table</td>
+        </tr>
+      </tfoot>
     </table>
   </section>
   <script src="javascripts/jquery-2.1.1.js"></script>
+  <script src="javascripts/comparators.js"></script>
   <script src="javascripts/broadcasting_record.js"></script>
   <script src="javascripts/month_record.js"></script>
   <script src="javascripts/date_formatter.js"></script>
