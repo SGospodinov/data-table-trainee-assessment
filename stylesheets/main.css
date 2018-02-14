@@ -1,0 +1,11 @@
+/*
+  Start adding CSS here
+*/
+
+#broadcasts-data-table {
+  display: none;
+}
+
+#broadcasts-data-table thead {
+  font-weight: bold;
+}
