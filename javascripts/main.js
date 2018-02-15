@@ -31,6 +31,32 @@ function createBroadcastingRecord(data){
 
 function renderTable(broadcastingRecord){
   $("#broadcasts-data-table tbody").html(broadcastingRecord.toHTML()).parent().show();
+  let tableRows = document.querySelectorAll('#broadcasts-data-table tbody tr[data-row-index]');
+  tableRows.forEach(function(row){
+    row.addEventListener('click', function(event){
+      selectRow(event.srcElement.parentElement, broadcastingRecord);
+    })
+  });
+}
+
+function selectRow(row, broadcastingRecord){
+  document.querySelectorAll('#broadcasts-data-table tr.selected').forEach(function(selectdRow){
+    selectdRow.classList.remove('selected');
+  });
+  row.classList.add('selected');
+  let index = parseInt(row.getAttribute('data-row-index'));
+  showChartFor(broadcastingRecord.getMonthRecord(index));
+}
+
+function showChartFor(monthRecord){
+  let chartTitle = document.getElementById('chart-title');
+  let chartWrapper = document.getElementById('chart-wrapper');
+  chartTitle.innerHTML = monthRecord.getFormatedMonth();
+  let chart = new MonthRecordChart(monthRecord, 'chart-canvas',
+      chartWrapper.parentElement.offsetWidth,
+      chartWrapper.parentElement.offsetWidth * 0.5);
+  chart.render();
+  chartWrapper.style.display = 'block';
 }
 
 function headerClicked(item, broadcastingRecord){

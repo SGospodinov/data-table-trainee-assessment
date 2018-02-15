@@ -7,6 +7,10 @@ class BroadcastingRecord {
     this.records.push(monthRecord);
   }
 
+  getMonthRecord(index){
+    return this.records[index];
+  }
+
   toHTML(){
     let html = "";
     this.records.forEach(function(record, index){

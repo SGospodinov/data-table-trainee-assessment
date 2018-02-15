@@ -24,20 +24,24 @@
           <th data-col-name="cbeebies">Cbeebies</th>
         </tr>
       </thead>
-      <tbody>
-      </tbody>
+      <tbody></tbody>
       <tfoot>
         <tr>
-          <td colspan="8">* Press the column titles to sort the table</td>
+          <td colspan="8">* Press the column titles to sort the table or the rows to see chart for each month</td>
         </tr>
       </tfoot>
     </table>
+    <div id="chart-wrapper">
+      <h2 id="chart-title"></h2>
+      <canvas id="chart-canvas"></canvas>
+    </div>
   </section>
   <script src="javascripts/jquery-2.1.1.js"></script>
   <script src="javascripts/comparators.js"></script>
   <script src="javascripts/broadcasting_record.js"></script>
-  <script src="javascripts/month_record.js"></script>
   <script src="javascripts/date_formatter.js"></script>
+  <script src="javascripts/month_record.js"></script>
+  <script src="javascripts/month_record_chart.js"></script>
   <script src="javascripts/main.js"></script>
 </body>
 </html>

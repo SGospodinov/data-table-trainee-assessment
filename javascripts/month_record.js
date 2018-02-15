@@ -14,10 +14,22 @@ class MonthRecord {
     return DateFormatter.format(new Date(this.month));
   }
 
+  getNumbersArray() {
+    return [
+      this.bbcone,
+      this.bbctwo,
+      this.bbcthree,
+      this.bbcfour,
+      this.bbcnews24,
+      this.cbbc,
+      this.cbeebies
+    ]
+  }
+
   toHTML(index){
     let className = ((index % 2) == 0) ? 'even' : 'odd';
     return `
-      <tr class="${ className }">
+      <tr class="${ className }" data-row-index="${ index }">
         <td>${ this.getFormatedMonth() }</td>
         <td>${ this.bbcone }</td>
         <td>${ this.bbctwo }</td>

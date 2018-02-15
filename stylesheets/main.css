@@ -55,3 +55,17 @@
 #broadcasts-data-table th[data-sort=desc]::after {
   content: "↓";
 }
+
+#broadcasts-data-table tr.selected {
+  border: 1px solid #0000FF;
+}
+
+#chart-wrapper {
+  display: none;
+  margin-bottom: 5%;
+}
+
+#chart-title {
+  text-align: center;
+  font-weight: lighter;
+}
