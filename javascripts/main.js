@@ -8,7 +8,8 @@ function onLoad(){
       renderTable(broadcastingRecord);
     }).
     fail(function(){
-      console.log("TODO: Show error message");
+      $('#content-wrapper').hide()
+      $('#loading.error').show();
     });
 
   let columnsHeaders = document.querySelectorAll('#broadcasts-data-table thead th');

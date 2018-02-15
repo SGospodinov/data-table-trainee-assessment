@@ -1,3 +1,17 @@
+#loading-error {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-align: center;
+  font-size: 2.4em;
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: #545454;
+  visibility: hidden;
+}
+
 #content-wrapper {
   width: 70%;
   margin: auto;
